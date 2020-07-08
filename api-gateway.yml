@@ -1,5 +1,18 @@
 server:
   port: 8080
+spring:
+  security:
+      oauth2:
+        client:
+          registration:
+            gateway:
+              provider: keycloack
+              client-id: spring-cloud-gateway-client
+              client-secret: 016c6e1c-9cbe-4ad3-aee1-01ddbb370f32
+          provider:
+            keycloack:
+              issuer-uri: http://localhost:8180/auth/realms/spring-cloud-gateway-realm
+              user-name-attribute: preferred_username
 ---
 spring:
   profiles: docker
