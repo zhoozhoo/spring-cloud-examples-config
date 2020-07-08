@@ -8,7 +8,7 @@ spring:
             gateway:
               provider: keycloack
               client-id: spring-cloud-gateway-client
-              client-secret: 016c6e1c-9cbe-4ad3-aee1-01ddbb370f32
+              client-secret: 4ac9fb73-4cdc-4c3d-b35a-faadbfdc07db
           provider:
             keycloack:
               issuer-uri: http://localhost:8180/auth/realms/spring-cloud-gateway-realm
