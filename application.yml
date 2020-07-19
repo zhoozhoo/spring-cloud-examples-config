@@ -1,7 +1,4 @@
 spring:
   zipkin:
    enabled: false
-management:
-   security:
-      enabled: false
    
