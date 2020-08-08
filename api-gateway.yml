@@ -37,17 +37,19 @@ spring:
             provider: keycloack
             client-id: spring-cloud-gateway-client
             client-secret: 4ac9fb73-4cdc-4c3d-b35a-faadbfdc07db
+  zipkin:
+    baseUrl: http://localhost:9411
 ---
 spring:
   profiles: docker
   zipkin:
-    baseUrl: http://tracing-server:9411
+    baseUrl: http://host.docker.internal:9411
   security:
     oauth2:
       client:
         provider:
           keycloack:
-            issuer-uri: http://auth-server:8180/auth/realms/spring-cloud-gateway-realm
+            issuer-uri: http://host.docker.internal:8180/auth/realms/spring-cloud-gateway-realm
             user-name-attribute: preferred_username
         registration:
           gateway:
