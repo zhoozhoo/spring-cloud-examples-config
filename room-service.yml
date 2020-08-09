@@ -17,7 +17,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://host.docker.internal8180/auth/realms/spring-cloud-gateway-realm
+          issuer-uri: http://host.docker.internal:8180/auth/realms/spring-cloud-gateway-realm
 eureka:
   client:
     serviceUrl:
