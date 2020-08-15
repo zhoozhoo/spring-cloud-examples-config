@@ -1,16 +1,2 @@
 server:
   port: 8888
-spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://localhost:8180/auth/realms/spring-cloud-gateway-realm
----
-spring:
-  profiles: docker
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://host.docker.internal:8180/auth/realms/spring-cloud-gateway-realm
