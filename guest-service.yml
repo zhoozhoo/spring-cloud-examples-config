@@ -7,7 +7,7 @@ spring:
         jwt:
           issuer-uri: http://localhost:8180/auth/realms/spring-cloud-gateway-realm
   zipkin:
-    baseUrl: http://localhost:9411
+    enabled: false
 ---
 spring:
   profiles: docker
