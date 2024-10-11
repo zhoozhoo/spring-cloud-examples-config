@@ -2,6 +2,9 @@ server:
   port: 9000
 
 spring:
+  config:
+    activate:
+      on-profile: default
   security:
     user:
       name: user1
