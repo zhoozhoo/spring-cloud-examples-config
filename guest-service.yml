@@ -10,7 +10,9 @@ spring:
     enabled: false
 ---
 spring:
-  profiles: docker
+  config:
+    activate:
+      on-profile: docker
   zipkin:
     baseUrl: http://host.docker.internal:9411
   security:

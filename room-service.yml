@@ -6,11 +6,17 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:8180/auth/realms/spring-cloud-gateway-realm
+  r2dbc:
+    url: "r2dbc:h2:mem:///testdb"
+    name: "sa"
+    password: ""
   zipkin:
     enabled: false
 ---
 spring:
-  profiles: docker
+  config:
+    activate:
+      on-profile: docker
   zipkin:
     baseUrl: http://host.docker.internal:9411
   security:
